@@ -5,8 +5,10 @@ class LoadBoard extends Component {
   render() {
     // TODO get this done
 
-    return null;
+    return <div>COMING SOON</div>;
   }
 }
+
+// TODO proptypes
 
 export default LoadBoard;
