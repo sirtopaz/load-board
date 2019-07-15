@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, Card, Image } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
+import { STATUS_TYPES, EQUIPTMENT_TYPES } from "./constants";
+
 class LoadCard extends Component {
   render() {
     return (
@@ -32,3 +34,16 @@ class LoadCard extends Component {
     );
   }
 }
+
+LoadCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  destination: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  value: PropType.number.isRequired,
+  equipment: PropTypes.oneOf(EQUIPTMENT_TYPES).isRequired,
+  locked: PropTypes.bool,
+  status: PropTypes.oneOf(STATUS_TYPES).isRequired
+};
+
+export default LoadCard;
