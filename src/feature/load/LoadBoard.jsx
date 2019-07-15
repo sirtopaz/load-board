@@ -1,8 +1,12 @@
-import React, { Component } from "react";
-import { Button, Card, Image } from "semantic-ui-react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { Button, Card, Image } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 class LoadBoard extends Component {
+  componentDidMount() {
+    this.props.onMount();
+  }
+
   render() {
     // TODO get this done
 
@@ -10,11 +14,7 @@ class LoadBoard extends Component {
       <Card.Group>
         <Card>
           <Card.Content>
-            <Image
-              floated="right"
-              size="mini"
-              src="/images/avatar/large/steve.jpg"
-            />
+            <Image floated="right" size="mini" src="/images/avatar/large/steve.jpg" />
             <Card.Header>Steve Sanders</Card.Header>
             <Card.Meta>Friends of Elliot</Card.Meta>
             <Card.Description>
@@ -34,11 +34,7 @@ class LoadBoard extends Component {
         </Card>
         <Card>
           <Card.Content>
-            <Image
-              floated="right"
-              size="mini"
-              src="/images/avatar/large/molly.png"
-            />
+            <Image floated="right" size="mini" src="/images/avatar/large/molly.png" />
             <Card.Header>Molly Thomas</Card.Header>
             <Card.Meta>New User</Card.Meta>
             <Card.Description>
@@ -58,16 +54,10 @@ class LoadBoard extends Component {
         </Card>
         <Card>
           <Card.Content>
-            <Image
-              floated="right"
-              size="mini"
-              src="/images/avatar/large/jenny.jpg"
-            />
+            <Image floated="right" size="mini" src="/images/avatar/large/jenny.jpg" />
             <Card.Header>Jenny Lawrence</Card.Header>
             <Card.Meta>New User</Card.Meta>
-            <Card.Description>
-              Jenny requested permission to view your contact details
-            </Card.Description>
+            <Card.Description>Jenny requested permission to view your contact details</Card.Description>
           </Card.Content>
           <Card.Content extra>
             <div className="ui two buttons">
@@ -85,6 +75,11 @@ class LoadBoard extends Component {
   }
 }
 
-// TODO proptypes
+LoadBoard.propTypes = {
+  idList: PropTypes.array.isRequired,
+  loading: PropTypes.bool,
+  onMount: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(['table', 'card'])
+};
 
 export default LoadBoard;
