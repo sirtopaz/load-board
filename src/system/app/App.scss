@@ -1,4 +1,4 @@
-.app-header {
+.app__header {
   flex: 0 0 auto;
   background-color: #282c34;
   font-size: 2rem;
@@ -6,15 +6,15 @@
   padding: 1rem;
 }
 
-.app-footer {
+.app__footer {
   background-color: #282c34;
   color: white;
   flex: 0 0 auto;
   padding: 0.5rem 1rem;
 }
 
-.app-content {
+.app__content {
   flex: 1 1 auto;
-  padding: 0.5rem 1rem;
+  padding: 2rem 1rem;
   overflow: auto;
 }

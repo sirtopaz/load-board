@@ -1,0 +1,25 @@
+/* feature/load/LoadCard */
+
+.load-card.ui.card {
+  .load-card__trip {
+    text-align: center;
+
+    .trip__origin {
+      display: block;
+      // TODO color: #800000;
+    }
+
+    .trip__destination {
+      display: block;
+      // TODO  color: #008000; // TODO
+    }
+  }
+
+  .load-card__price.meta {
+    text-align: right;
+    color: #000080;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 0 1rem;
+  }
+}

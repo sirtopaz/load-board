@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Card, Label } from 'semantic-ui-react';
+import { Card, Label, Divider } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import { STATUS_TYPES, EQUIPTMENT_TYPES } from './constants';
+import { formatPrice } from './utils';
+import './LoadCard.scss';
 
 class LoadCard extends Component {
   handleStatusChange = value => {
@@ -16,15 +18,18 @@ class LoadCard extends Component {
     const { origin, destination, status, value, equipment } = item;
 
     return (
-      <Card>
+      <Card className="load-card">
         <Card.Content>
-          <Label circular size="large">
+          <Label circular size="large" floating>
             {equipment}
           </Label>
-          <Card.Header>
-            <span>{origin}</span> to <span>{destination}</span>
+          <Card.Header className="load-card__trip">
+            <span className="trip__origin">{origin}</span>
+            <span> to </span>
+            <span className="trip__destination"> {destination}</span>
           </Card.Header>
-          <Card.Meta> {value} </Card.Meta>
+          <Divider />
+          <Card.Meta className="load-card__price">{formatPrice(value)}</Card.Meta>
           <Card.Description> </Card.Description>
         </Card.Content>
         <Card.Content extra>
