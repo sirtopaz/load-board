@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
 
-import { LoadBoard, LoadGrid } from '../../feature/load';
+import { LoadBoard, LoadGrid, LoadModal } from '../../feature/load';
 import './App.scss';
 
 // TODO show modal
@@ -22,8 +22,13 @@ class App extends Component {
 
   handleItemClick = (evt, data) => {
     this.setState({
-      view: data.name
+      view: data.name,
+      selectedLoadId: null
     });
+  };
+
+  handleModalClose = () => {
+    this.setState({ selectedLoadId: null });
   };
 
   renderToolbar() {
@@ -44,11 +49,13 @@ class App extends Component {
   }
 
   renderModal() {
-    if (!this.state.selectedLoadId) {
+    const { selectedLoadId } = this.state;
+
+    if (!selectedLoadId) {
       return null;
     }
 
-    return null;
+    return <LoadModal id={selectedLoadId} onClose={this.handleModalClose} />;
   }
 
   render() {

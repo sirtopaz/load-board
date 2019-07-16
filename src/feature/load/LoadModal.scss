@@ -1,0 +1,33 @@
+/* feature/load/LoadCard */
+
+.load-modal.ui.modal {
+  .load-modal__trip {
+    display: flex;
+    align-items: center;
+
+    .trip__details {
+      flex: 1 1 auto;
+    }
+
+    .trip__equiptment {
+      flex: 0 0 auto;
+    }
+  }
+
+  .load-modal__details {
+    display: flex;
+    align-items: center;
+
+    .details__value {
+      flex: 1 1 auto;
+      color: #000080;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 1rem;
+    }
+
+    .details__status {
+      flex: 0 0 auto;
+    }
+  }
+}
