@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchLoadList } from './ducks/actions';
-import LoadBoardView from './LoadBoardView';
+import LoadCard from './LoadCard';
 
 const mapStateToProps = (state, props) => {
   const { items } = state.load;
@@ -20,9 +20,9 @@ const mapDispatchToProps = (dispatch, props) => {
   };
 };
 
-const LoadBoardViewContainer = connect(
+const LoadCardContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoadBoardView);
+)(LoadCard);
 
-export default LoadBoardViewContainer;
+export default LoadCardContainer;

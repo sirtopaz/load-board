@@ -21,7 +21,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
         ...state.items
       };
 
-      const list = action.payload.map(item => {
+      const idList = action.payload.map(item => {
         items[item.id] = item;
 
         return item.id;
@@ -30,12 +30,12 @@ export const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: false,
-        list,
+        idList,
         items
       };
     }
 
-    case ACTIONS.GET_RECIEVED: {
+    case ACTIONS.GET_RECEIVED: {
       const { payload } = action;
 
       const items = {

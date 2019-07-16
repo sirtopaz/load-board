@@ -65,8 +65,8 @@ export const FIXTURES = [
 
 export const ACTIONS = {
   LIST: 'LOAD:list',
-  LIST_RECIEVED: 'LOAD:list_received',
+  LIST_RECEIVED: 'LOAD:list_received',
   GET: 'LOAD:get',
-  GET_RECIEVED: 'LOAD:get_received',
+  GET_RECEIVED: 'LOAD:get_received',
   UPDATE: 'LOAD:update'
 };
