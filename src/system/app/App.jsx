@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Menu, Icon } from 'semantic-ui-react';
 
 import { LoadBoard, LoadGrid } from '../../feature/load';
 import './App.scss';
@@ -19,8 +20,35 @@ class App extends Component {
     this.setState({ selectedLoadId });
   };
 
+  handleItemClick = (evt, data) => {
+    this.setState({
+      view: data.name
+    });
+  };
+
   renderToolbar() {
-    return <div className="content__toolbar">COMING SOON {this.state.selectedLoadId}</div>;
+    const { view } = this.state;
+
+    return (
+      <div className="content__toolbar">
+        <Menu icon compact>
+          <Menu.Item name="grid" active={view === 'grid'} onClick={this.handleItemClick}>
+            <Icon name="columns" />
+          </Menu.Item>
+          <Menu.Item name="board" active={view === 'board'} onClick={this.handleItemClick}>
+            <Icon name="grid layout" />
+          </Menu.Item>
+        </Menu>
+      </div>
+    );
+  }
+
+  renderModal() {
+    if (!this.state.selectedLoadId) {
+      return null;
+    }
+
+    return null;
   }
 
   render() {
@@ -28,6 +56,7 @@ class App extends Component {
       <Fragment>
         <header className="app__header">Load Board</header>
         <section className="app__content">
+          {this.renderModal()}
           {this.renderToolbar()}
 
           {this.state.view === 'grid' ? <LoadGrid onSelect={this.handleSelect} /> : <LoadBoard />}

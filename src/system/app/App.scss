@@ -15,8 +15,13 @@
 
 .app__content {
   flex: 1 1 auto;
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   overflow: auto;
+
+  .content__toolbar {
+    padding: 0.5rem;
+    text-align: right;
+  }
 }
 
 // GENERAL STYLES

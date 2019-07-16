@@ -3,6 +3,7 @@ import { Card } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import LoadCard from './LoadCardContainer';
+import './LoadBoard.scss';
 
 class LoadBoard extends Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class LoadBoard extends Component {
     const { idList } = this.props;
 
     return (
-      <Card.Group>
+      <Card.Group className="load-board">
         {idList.map(id => {
           return <LoadCard key={`key_${id}`} id={id} />;
         })}
