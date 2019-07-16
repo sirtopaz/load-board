@@ -14,7 +14,7 @@ class LoadBoard extends Component {
     const { idList } = this.props;
 
     return (
-      <Card.Group className="load-board">
+      <Card.Group className="load-board" centered>
         {idList.map(id => {
           return <LoadCard key={`key_${id}`} id={id} />;
         })}

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { fetchLoadList } from './ducks/actions';
+import { updateLoad } from './ducks/actions';
 import LoadCard from './LoadCard';
 
 const mapStateToProps = (state, props) => {
@@ -15,7 +15,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => {
   return {
     onChange: changes => {
-      dispatch(fetchLoadList(props.id, changes));
+      dispatch(updateLoad(props.id, changes));
     }
   };
 };

@@ -65,7 +65,7 @@ class LoadGrid extends Component {
 
   render() {
     return (
-      <Table className="load-grid" celled padded>
+      <Table className="load-grid" celled padded unstackable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell singleLine>Origin / Destination</Table.HeaderCell>
