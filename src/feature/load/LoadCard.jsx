@@ -3,7 +3,7 @@ import { Card, Label, Divider } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import { STATUS_TYPES, EQUIPTMENT_TYPES } from './constants';
-import { formatPrice } from './utils';
+import { formatCurrency } from './utils';
 import './LoadCard.scss';
 
 class LoadCard extends Component {
@@ -29,7 +29,7 @@ class LoadCard extends Component {
             <span className="trip__destination"> {destination}</span>
           </Card.Header>
           <Divider />
-          <Card.Meta className="load-card__price">{formatPrice(value)}</Card.Meta>
+          <Card.Meta className="load-card__value">{formatCurrency(value)}</Card.Meta>
           <Card.Description> </Card.Description>
         </Card.Content>
         <Card.Content extra>
