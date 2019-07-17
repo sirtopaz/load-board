@@ -1,4 +1,4 @@
-export { default as App } from './App';
+export { default as App } from './AppContainer';
 
 const INITIAL_STATE = {
   startedAt: Date.now()

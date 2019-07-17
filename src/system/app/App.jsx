@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { Menu, Icon } from 'semantic-ui-react';
 
 import { LoadBoard, LoadGrid, LoadModal } from '../../feature/load';
@@ -14,6 +15,15 @@ class App extends Component {
       view: 'grid',
       selectedLoadId: null
     };
+  }
+
+  componentDidMount() {
+    //check for updates every minute
+    this.check = setInterval(this.props.onUpdateCheck, 1000 * 60);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.check);
   }
 
   handleSelect = selectedLoadId => {
@@ -72,5 +82,10 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  onUpdateCheck: PropTypes.func.isRequired,
+  updatedAt: PropTypes.number.isRequired
+};
 
 export default App;

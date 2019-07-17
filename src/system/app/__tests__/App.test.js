@@ -9,7 +9,7 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
     <Provider store={getStore()}>
-      <App />
+      <App onUpdateCheck={() => {}} updatedAt={Date.now()} />
     </Provider>,
     div
   );

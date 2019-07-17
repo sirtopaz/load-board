@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Modal, Label, Icon, Dropdown, Menu } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import { Modal, Label, Icon, Dropdown, Menu } from 'semantic-ui-react';
 
 import { STATUS_TYPES, EQUIPTMENT_TYPES, STATUS_OPTIONS } from './constants';
 import { formatCurrency } from './utils';
