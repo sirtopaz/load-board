@@ -45,7 +45,7 @@ class LoadGrid extends Component {
             </Label>
           </Table.Cell>
           <Table.Cell>
-            <div>{status}</div>
+            <div className={`load-grid__status ${status}`}>{status}</div>
           </Table.Cell>
           <Table.Cell textAlign="center">
             <Icon

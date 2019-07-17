@@ -5,4 +5,11 @@
     color: #000080;
     font-weight: bold;
   }
+
+  .load-grid__status {
+    &.available {
+      color: #21ba45;
+      font-weight: bold;
+    }
+  }
 }
