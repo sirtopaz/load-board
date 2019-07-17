@@ -22,6 +22,7 @@ class LoadGrid extends Component {
       const { origin, destination, status, value, equipment, locked } = item;
 
       const statusIcon = locked ? 'lock' : 'edit';
+      const booked = status === 'booked';
 
       return (
         <Table.Row key={`item_${item.id}`}>
@@ -39,7 +40,7 @@ class LoadGrid extends Component {
             {formatCurrency(value)}
           </Table.Cell>
           <Table.Cell textAlign="center">
-            <Label circular size="large">
+            <Label circular size="large" color={booked ? 'grey' : 'green'}>
               {equipment}
             </Label>
           </Table.Cell>

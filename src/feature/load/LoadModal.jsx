@@ -29,7 +29,8 @@ class LoadModal extends Component {
 
   render() {
     const { item, onClose } = this.props;
-    const { origin, destination, value, equipment } = item;
+    const { origin, destination, value, equipment, status } = item;
+    const booked = status === 'booked';
 
     return (
       <Modal className="load-modal" onClose={onClose} size="tiny" open closeOnEscape closeOnDimmerClick>
@@ -42,7 +43,7 @@ class LoadModal extends Component {
             <span className="visually-hidden"> To </span>
             <span className="trip__destination"> {destination}</span>
           </div>
-          <Label className="trip__equiptment" circular size="massive">
+          <Label className="trip__equiptment" circular size="massive" color={booked ? 'grey' : 'green'}>
             {equipment}
           </Label>
         </Modal.Header>

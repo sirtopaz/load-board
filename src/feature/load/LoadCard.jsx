@@ -16,6 +16,7 @@ class LoadCard extends Component {
   render() {
     const { item } = this.props;
     const { origin, destination, status, value, equipment, locked } = item;
+    const booked = status === 'booked';
 
     return (
       <Card className="load-card">
@@ -28,7 +29,7 @@ class LoadCard extends Component {
           <Divider />
           <Card.Meta className="load-card__details">
             <div className="details__value">{formatCurrency(value)}</div>
-            <Label className="details__equiptment" circular size="massive">
+            <Label className="details__equiptment" circular size="massive" color={booked ? 'grey' : 'green'}>
               {equipment}
             </Label>
           </Card.Meta>
