@@ -16,7 +16,7 @@ to test:
 
 Based on the requirements, the first UI was highly suggested to be a tabular view with a modal dialog to edit values. After creating that I thought that a card view could be valuable for the kind of comparable data of this type.
 
-This demo has many of the architectural philosophies I like to follow:
+This demo has many of the engineering philosophies I like to follow:
 
 - Strong architectural boundaries
 - Visual components separated from data ones
@@ -26,4 +26,4 @@ This demo has many of the architectural philosophies I like to follow:
 
 ## Effort
 
-By leveraging well known architectural patterns total development time was about 4 hours spread across 2.5 days elapsed time. Compromises to bring the development time in were: fully specified unit tests (smoke testing was done) and more user focused styling (better text copy, styling of elements, business iconography - e.g. equipment)
+By leveraging well known architectural patterns total development time was about 4 hours spread across 2.5 days. Compromises to bring the development time in were: fully specified unit tests (smoke testing was done) and more user focused styling (better text copy, styling of elements, business iconography - e.g. equipment)
