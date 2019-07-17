@@ -7,7 +7,7 @@ it('renders without crashing', () => {
   const item = {
     origin: 'from',
     destination: 'to',
-    date: '',
+    date: '2019-01-01',
     value: 1000,
     equipment: 'V',
     locked: true,

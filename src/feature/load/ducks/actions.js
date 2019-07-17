@@ -55,7 +55,8 @@ export const updateLoad = (loadId, changes) => (dispatch, getState) => {
 };
 
 // ----------------------------------------
-// NOTE: as part of the spec we fake updates from the backend.. mocking a polling update here
+// NOTE: as part of the spec we fake updates from the backend..
+// mocking a polling update here
 const fakeBackendUpdate = () => (dispatch, getState) => {
   dispatch({ type: ACTIONS.GET });
 
@@ -69,9 +70,14 @@ const fakeBackendUpdate = () => (dispatch, getState) => {
     ...items[itemId]
   };
 
-  item.locked = !item.locked;
+  if (Math.random() < 0.5) {
+    item.locked = !item.locked;
+  } else {
+    item.status = item.status === 'booked' ? 'available' : 'booked';
+  }
 
   dispatch({ type: ACTIONS.GET_RECIEVED, payload: item });
 };
 
-// set an an interval to poll
+// set an an interval to poll for every minute;
+setInterval(fakeBackendUpdate, 1000);

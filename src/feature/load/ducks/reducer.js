@@ -3,7 +3,8 @@ import { ACTIONS } from './constants';
 const INITIAL_STATE = {
   loading: false,
   idList: [],
-  items: {}
+  items: {},
+  updatedAt: Date.now()
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -31,7 +32,8 @@ export const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         loading: false,
         idList,
-        items
+        items,
+        updatedAt: Date.now()
       };
     }
 
@@ -46,7 +48,8 @@ export const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: false,
-        items
+        items,
+        updatedAt: Date.now()
       };
     }
 
