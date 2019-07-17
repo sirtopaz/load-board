@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import LoadCard from '../LoadCard';
 
-it('renders without crashing', () => {
+it('renders without errors', () => {
   const item = {
     origin: 'from',
     destination: 'to',

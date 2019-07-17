@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Label, Icon, Dropdown, Menu } from 'semantic-ui-react';
 
-import { STATUS_TYPES, EQUIPTMENT_TYPES, STATUS_OPTIONS } from './constants';
+import { STATUS_OPTIONS, ITEM_PROP_TYPE } from './constants';
 import { formatCurrency } from './utils';
 import './LoadModal.scss';
 
@@ -58,16 +58,6 @@ class LoadModal extends Component {
     );
   }
 }
-
-const ITEM_PROP_TYPE = PropTypes.shape({
-  origin: PropTypes.string.isRequired,
-  destination: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
-  equipment: PropTypes.oneOf(EQUIPTMENT_TYPES).isRequired,
-  locked: PropTypes.bool,
-  status: PropTypes.oneOf(STATUS_TYPES).isRequired
-});
 
 LoadModal.propTypes = {
   id: PropTypes.string.isRequired,
