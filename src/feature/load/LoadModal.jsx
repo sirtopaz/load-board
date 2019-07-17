@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Modal, Label, Icon, Dropdown, Menu } from 'semantic-ui-react';
+import { Modal, Label, Icon, Dropdown, Menu, Button } from 'semantic-ui-react';
 
 import { STATUS_OPTIONS, ITEM_PROP_TYPE } from './constants';
 import { formatCurrency } from './utils';
@@ -55,6 +55,9 @@ class LoadModal extends Component {
             </div>
           </Modal.Description>
         </Modal.Content>
+        <Modal.Actions>
+          <Button onClick={onClose}>OK</Button>
+        </Modal.Actions>
       </Modal>
     );
   }
@@ -63,6 +66,7 @@ class LoadModal extends Component {
 LoadModal.propTypes = {
   id: PropTypes.string.isRequired,
   item: ITEM_PROP_TYPE.isRequired,
+  onClose: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   updatedAt: PropTypes.number
 };

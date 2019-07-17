@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch, props) => {
   return {
     onChange: changes => {
       dispatch(updateLoad(props.id, changes));
-      props.onClose();
     }
   };
 };
