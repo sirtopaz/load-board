@@ -61,11 +61,10 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <header className="app__header">Load Board</header>
+        <header className="app__header">Welcome to Your Load Board</header>
         <section className="app__content">
           {this.renderModal()}
           {this.renderToolbar()}
-
           {this.state.view === 'grid' ? <LoadGrid onSelect={this.handleSelect} /> : <LoadBoard />}
         </section>
         <footer className="app__footer">Copyright &copy;2019 Sean Gervais</footer>
