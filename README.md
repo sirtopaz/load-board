@@ -8,6 +8,10 @@ Follow to following steps to show the demo
 - `yarn install`
 - `yarn start`
 
+to test:
+
+- `yarn test`
+
 ## Approach
 
 Based on the requirements, the first UI was highly suggested to be a tabular view with a modal dialog to edit values. After creating that I thought that a card view could be valuable for the kind of comparable data of this type.
