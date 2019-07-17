@@ -18,8 +18,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //check for updates every minute
-    this.check = setInterval(this.props.onUpdateCheck, 1000 * 60);
+    //check for updates every 10 seconds
+    this.check = setInterval(this.props.onUpdateCheck, 1000 * 10);
   }
 
   componentWillUnmount() {
